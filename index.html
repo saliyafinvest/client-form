@@ -1,0 +1,25 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Client Application – Manthan Saliya</title>
+<style>
+  html, body { margin:0; height:100%; background:#faf9f6; }
+  iframe { display:block; width:100%; height:100%; border:0; }
+  p { font:15px -apple-system, Segoe UI, Roboto, Arial, sans-serif; color:#555; text-align:center; padding:24px; }
+</style>
+</head>
+<body>
+<!-- Shows the Google Apps Script form in a frame. Inside a frame, phones do not send Google's
+     sign-in cookies, so the form opens even when the phone is signed into several Google accounts. -->
+<iframe id="form" title="Client Application – Manthan Saliya" allow="clipboard-write"></iframe>
+<noscript><p>Please open: https://script.google.com/macros/s/AKfycbysKEzSV1mIVD4G_NUVMSRbwXZ2Z85-Hue61e_iZLJsTd7DUWlm1P8n_wrj0BKd5Mo7Cg/exec</p></noscript>
+<script>
+  var FORM = 'https://script.google.com/macros/s/AKfycbysKEzSV1mIVD4G_NUVMSRbwXZ2Z85-Hue61e_iZLJsTd7DUWlm1P8n_wrj0BKd5Mo7Cg/exec';
+  // Pass ?draft=ID (resume links) through to the form.
+  var draft = new URLSearchParams(location.search).get('draft');
+  document.getElementById('form').src = FORM + (draft ? '?draft=' + encodeURIComponent(draft) : '');
+</script>
+</body>
+</html>
